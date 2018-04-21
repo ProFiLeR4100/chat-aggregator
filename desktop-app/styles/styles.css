@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.title-bar {
+  height: 40px;
+  background: black;
+  color: white;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+.main-sidebar {
+  background: #fff;
+  float: left;
+  width: 70px;
+  height: calc(100vh - 40px);
+}
+.main-sidebar .sidebar-item {
+  height: 60px;
+  width: 60px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+}
+.main-sidebar .sidebar-item:hover,
+.main-sidebar .sidebar-item._active {
+  background: #419FD9;
+}
+.main-sidebar .sidebar-item:hover .sidebar-item-content,
+.main-sidebar .sidebar-item._active .sidebar-item-content {
+  color: white;
+}
+.main-sidebar .sidebar-item-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  color: dimgray;
+  -webkit-transition: all 100ms;
+  -moz-transition: all 100ms;
+  -ms-transition: all 100ms;
+}
+.main-sidebar .sidebar-item-wrapper {
+  -webkit-transition: all 100ms;
+  -moz-transition: all 100ms;
+  -ms-transition: all 100ms;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-transition: all 100ms;
+  transition: all 100ms;
+  background: #ffffff;
+  height: 70px;
+  width: 70px;
+}
+.main-content {
+  margin-left: 70px;
+  height: calc(100vh - 40px);
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main-content:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#050505+0,000000+100&1+0,0+100 */
+  background: -moz-linear-gradient(left, rgba(5, 5, 5, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(5, 5, 5, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(5, 5, 5, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0050505', endColorstr='#00000000', GradientType=1);
+  /* IE6-9 */
+}
+.page {
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #E5E5E5;
+  height: calc(100vh - 40px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.page__chat {
+  padding: 0;
+}
+.page__chat iframe {
+  width: 100%;
+  border: 0;
+  background: #fff;
+  height: calc(100vh - calc(40px + 5px));
+}

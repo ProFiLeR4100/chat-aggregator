@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="LiveChatGUI">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body ng-controller="MainController as $ctrl">
+    <div class="title-bar">Live Chat App</div>
+    <div class="main-sidebar">
+        <div class="sidebar-item-wrapper"
+             ng-repeat="menuItem in $ctrl.menu track by $index">
+            <div class="sidebar-item {{menuItem.active?'_active':''}}"
+                 title="{{menuItem.title}}"
+                 ng-click="menuItem.onClick(menuItem)">
+                <div class="sidebar-item-content">
+                    <i class="fa fa-{{menuItem.icon}} fa-2x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div ng-if="$ctrl.currentPage==='start'" class="page">
+            <div id="asd">adad</div> 1
+        </div>
+        <div ng-if="$ctrl.currentPage==='link'" class="page">
+            2
+        </div>
+        <div ng-if="$ctrl.currentPage==='start-server'" class="page">
+            3
+        </div>
+        <div ng-if="$ctrl.currentPage==='chat'" class="page page__chat">
+            <iframe src="http://localhost:3000" seamless='seamless' frameBorder='0'></iframe>
+        </div>
+        <div ng-if="$ctrl.currentPage==='settings'" class="page">
+            4
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
